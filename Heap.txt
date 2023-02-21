@@ -1,0 +1,92 @@
+max/min kopiec i następujące operacje:
++ v (dodaj liczbę v do kopca)
+- (usuń maximum z max kopca (lub minimum z min kopca), i wypisz jego wartość na ekranie)
+p (wypisz na ekran wartości wszystkich elementów kopca w kolejności, w jakiej są przechowywane w tablicy)
+r n v1 ...vn (usuń wszystkie elementy z kopca i utwórz nowy kopiec z podanych n nowych elementów o wartościach v1 ...vn)
+s (zmień orientację kopca - z max do min albo z min do max; operacja s może być wykonana wiele razy)
+q (wyjdź z programu)
+Dodatkowe uwagi:
+Operacja 'r' nie jest tym samym, co ciąg następujących po sobie operacji '+'.
+Jeśli obaj potomkowie elementu mają taką samą wartość, potomek z mniejszym indeksem jest zamieniany z rodzicem.
+
+Input
+Ciąg instrukcji podawanych w formacie omówionym powyżej. Ostatnią instrukcją jest q.
+
+Output
+Rezultaty instrukcji '-' oraz 'p'.
+
+Example
+Input
++ 1
++ 2
++ 3
++ 4
++ 5
++ 6
++ 7
++ 8
+p
+-
+-
+-
+-
+-
+-
+-
+-
+p
+r 8 1 2 3 4 5 6 7 8
+p
+-
+-
+-
+-
+-
+-
+-
+-
+p
+r 8 1 2 3 4 5 6 7 8
+s
+p
+-
+-
+-
+-
+-
+-
+-
+-
+p
+q
+
+Output
+8 7 6 4 3 2 5 1 
+8
+7
+6
+5
+4
+3
+2
+1
+
+8 5 7 4 1 6 3 2 
+8
+7
+6
+5
+4
+3
+2
+1
+
+1 2 3 4 5 6 7 8 
+1
+2
+3
+4
+5
+6
+7
+8
