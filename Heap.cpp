@@ -3,7 +3,8 @@
 
 using namespace std;
 
-enum HeapMode {
+enum HeapMode 
+{
     MAX,
     MIN
 };
@@ -121,7 +122,8 @@ void ExpandArray(string** array, int* size)
     for (int i = 0; i < *size - 1; i++)
     {
         newArray[i] = *(*array + i);
-    } newArray[*size - 1] = "0";
+    } 
+    newArray[*size - 1] = "0";
 
     delete[] * array;
     *array = newArray;
@@ -129,7 +131,8 @@ void ExpandArray(string** array, int* size)
 void DelFirst(string** array, int* size)
 {
     (*size)--;
-    if (*size > 0) {
+    if (*size > 0) 
+    {
         string* newArray = new string[*size];
         for (int i = 0; i < *size; i++)
         {
@@ -145,12 +148,14 @@ void DelFirst(string** array, int* size)
 }
 void CreateHeap(string heap[], int heapSize, HeapMode mode)
 {
-    if (heapSize > 0) {
+    if (heapSize > 0) 
+    {
         if (mode == MAX)
         {
             MaxHeap(heap, heapSize);
         }
-        else {
+        else 
+        {
             MinHeap(heap, heapSize);
         }
     }
@@ -191,7 +196,8 @@ int main()
 
             int n;
             cin >> n;
-            while (n > 0) {
+            while (n > 0) 
+            {
                 string x;
                 cin >> x;
                 ExpandArray(&Array, &ArraySize);
